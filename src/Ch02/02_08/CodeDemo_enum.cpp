@@ -5,7 +5,7 @@
 #include <iostream>
 #include <cstdint>
 
-enum asset_type {texture, sound, animation, script};
+enum asset_type {texture, sound, animation, script};  //Enumerations (enums) 
 
 int main(){
     int asset_value;
