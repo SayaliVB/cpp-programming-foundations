@@ -18,10 +18,16 @@ double CalculateTotalCost(std::vector<Resource> resources){
     for (const auto& resource : resources){
         double costWithTax = resource.baseCost;
         
-        if (resource.type == 'B')      // Basic resource: 5% tax
-            costWithTax += resource.baseCost * 0.05;
-        else if (resource.type == 'L') // Luxury resource: 15% tax
-            costWithTax += resource.baseCost * 0.15;
+        switch (resource.type){
+            case 'B':
+                costWithTax += resource.baseCost * 0.05;
+                break;
+            case 'L':
+                costWithTax += resource.baseCost * 0.15;
+                break;
+            default:
+                break;
+        }
 
         // Essential resource 'E' has no tax, so no change is needed
         
