@@ -38,6 +38,34 @@ std::vector<double> GetScores(int millisecondsDiff, double secondsDiff, double b
     return results;
 }
 
+/*
+
+double CalculateScore(int millisecondsDiff, double bonusMultiplier= 1.0) {
+    double score = 0.0;
+    if (millisecondsDiff <= 50){
+        score = 100;
+    }
+    else if (millisecondsDiff <= 100){
+        score = 70;
+    }
+    else if (millisecondsDiff <= 200){
+        score = 50;
+    }
+    return score * bonusMultiplier;
+}
+
+// Overloaded function to calculate score based on seconds difference 
+// You still need to make the bonus multiplier optional with a default value
+double CalculateScore(double secondsDiff, double bonusMultiplier = 1.5) {
+    double score = 0.0;
+    double millisecondsDiff = secondsDiff * 1000;
+    score = CalculateScore(static_cast<int> (millisecondsDiff), bonusMultiplier);
+
+    return score;
+}
+
+*/
+
 int main(){
     // Example 1
     int millisecondsDiff = 45;    // Input for the function using milliseconds
