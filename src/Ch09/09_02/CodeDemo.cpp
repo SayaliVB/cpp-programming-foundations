@@ -18,6 +18,7 @@ int main(){
     else{
         while (!inFile.eof()){
             getline(inFile, str);
+            // std::cout << str << std::endl;
             std::cout << str << ", ";
             getline(inFile, str);
             number = stoi(str);
